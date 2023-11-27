@@ -4,7 +4,7 @@ module Voyager
       extend ActiveSupport::Concern
 
       # Finds a single record by bib id
-      # @return [string] The path to the MARC record associated with the given id.
+      # @return [MARC::Record] The MARC record associated with the given id.
       def find_by_bib_id(bib_id)
         path = Rails.root.join('tmp', 'bib', 'record.marc').to_s
 
@@ -23,7 +23,7 @@ module Voyager
           # causes problems with NFS locks on NFS volumes, so we'll
           # read in the file and pass the content in as a StringIO.
           bib_marc_record = MARC::Reader.new(StringIO.new(File.read(path))).first
-          return path
+          return bib_marc_record
         rescue Encoding::InvalidByteSequenceError => e
           # Re-raise error, appending a bit of extra info
           raise e, "Problem decoding characters for record in marc file #{bib_id}. Error message: #{$!}", $!.backtrace
