@@ -1,0 +1,17 @@
+development:
+  oracle:
+    host: localhost
+    port: 1527
+    database_name: DBNAME
+    user: username
+    password: password
+  remote_request_api_key: 'changethis'
+
+test:
+  oracle:
+    host: null
+    port: null
+    database_name: null
+    user: null
+    password: null
+  remote_request_api_key: 'changethis'
