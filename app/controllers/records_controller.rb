@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-class RecordsController < ApplicationController
+class RecordsController < ApiController
+  before_action :authenticate_request_token
+
   def info_json
     holdings = Voyager::Client.new(VOYAGER_CONFIG).retrieve_holdings(params[:bib_id])
     render json: { bib_id: params[:bib_id].to_i, holdings_record_ids: holdings.keys }
