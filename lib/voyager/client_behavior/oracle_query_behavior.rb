@@ -1,7 +1,6 @@
 module Voyager
   module ClientBehavior
     module OracleQueryBehavior
-
       ORACLE_WAIT_TIMEOUT = 5.seconds
 
       # From: https://github.com/cul/clio-backend/blob/3ad14e63cf75ceae0f67427d9cdab882ece44132/lib/oracle_connection.rb

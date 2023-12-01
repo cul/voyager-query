@@ -29,12 +29,13 @@ module Voyager
     end
 
     def break_oracle_connection!
-      @oracle_connection.break
+      return unless @oracle_connection
+
       # Attempt a clean disconnect from Oracle and then set the connection
       # variable to nil so that the oracle_connection method
       # re-establishes the connection when it is called again.
+      @oracle_connection.break
       @oracle_connection = nil
     end
-
   end
 end

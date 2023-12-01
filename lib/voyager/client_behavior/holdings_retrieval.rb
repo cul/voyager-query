@@ -6,7 +6,6 @@ module Voyager
       ORACLE_WAIT_TIMEOUT = 10.seconds
 
       def holdings_for_bib_id(bib_id)
-        # path = Rails.root.join('tmp', 'holdings', 'record.marc').to_s
         path = Rails.root.join('tmp', 'holdings').to_s
 
         FileUtils.mkdir_p(path)
@@ -21,6 +20,7 @@ module Voyager
         result_counter = 0
         Dir.foreach(path) do |entry|
           next unless entry.ends_with?('.marc')
+
           marc_file = File.join(path, entry)
           begin
             # Note 1: Need to process oracle-retrieved files with UTF-8 encoding
