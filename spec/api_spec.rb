@@ -4,8 +4,8 @@ RSpec.describe 'update resource', type: :request do
   let(:identifier) { 1401112 }
 
   context 'GET' do
-    context '/v1/records/:id' do
-      let(:identifier_get_url) { "/v1/records/#{identifier}" }
+    context '/api/v1/records/:id' do
+      let(:identifier_get_url) { "/api/v1/records/#{identifier}" }
 
       before do
         allow_any_instance_of(Voyager::Client).to receive(:retrieve_holdings).with(identifier).and_return(
@@ -24,8 +24,8 @@ RSpec.describe 'update resource', type: :request do
       end
     end
 
-    context '/v1/records/:id/record.marc' do
-      let(:identifier_get_url) { "/v1/records/#{identifier}/record.marc" }
+    context '/api/v1/records/:id/record.marc' do
+      let(:identifier_get_url) { "/api/v1/records/#{identifier}/record.marc" }
       let(:title) { "test title" }
       let(:marc_record) do
         record = MARC::Record.new
@@ -50,9 +50,9 @@ RSpec.describe 'update resource', type: :request do
       end
     end
 
-    context '/v1/records/:bib_id/holdings/:holdings_record_id/record.marc' do
+    context '/api/v1/records/:bib_id/holdings/:holdings_record_id/record.marc' do
       let(:holdings_identifier) { 1742778 }
-      let(:identifier_get_url) { "/v1/records/#{identifier}/holdings/#{holdings_identifier}/record.marc" }
+      let(:identifier_get_url) { "/api/v1/records/#{identifier}/holdings/#{holdings_identifier}/record.marc" }
 
       before do
         allow_any_instance_of(Voyager::Client).to receive(:retrieve_holdings).with(identifier).and_return(
