@@ -1,0 +1,27 @@
+require 'rails_helper'
+
+RSpec.describe 'update resource', type: :request do
+  let(:identifier) { 1401112 }
+
+  context 'GET' do
+    context '/api/v1/records/:id' do
+      let(:identifier_get_url) { "/api/v1/records/#{identifier}" }
+
+      before do
+        allow_any_instance_of(Voyager::Client).to receive(:retrieve_holdings).with(identifier).and_return(
+          { identifier.to_i => 'binary marc data' }
+        )
+      end
+
+      it 'returns a success response' do
+        get_with_auth identifier_get_url, params: {}
+        expect(response).to have_http_status(:success)
+      end
+
+      it 'returns a response contiaining the identifier when using the record identifier in the url' do
+        get_with_auth identifier_get_url, params: {}
+        expect(JSON.parse(response.body)).to include('bib_id' => identifier)
+      end
+    end
+  end
+end

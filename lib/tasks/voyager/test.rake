@@ -1,4 +1,4 @@
-namespace :voyager_query do
+namespace :voyager do
     namespace :test do
       task :check_oracle_connection => :environment do
         oracle_config = VOYAGER_CONFIG[:oracle]

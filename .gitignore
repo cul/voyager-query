@@ -34,9 +34,13 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# Ignore hidden files.
 .DS_Store
 .rubocop_todo.yml
 *.swp
+
+# simplecov coverage report.
+/coverage
 
 # Ignore config files with sensitive data
 /config/voyager.yml
