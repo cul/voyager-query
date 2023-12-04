@@ -3,7 +3,7 @@
 module Api
   module V1
     class RecordsController < ApiController
-      before_action :authenticate_request_token#, only: [:bib_record_marc]
+      before_action :authenticate_request_token
 
       def info_json
         holdings = Voyager::Client.new(VOYAGER_CONFIG).retrieve_holdings(params[:bib_id].to_i)

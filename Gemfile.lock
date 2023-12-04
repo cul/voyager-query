@@ -342,6 +342,7 @@ DEPENDENCIES
   marc (~> 1.2)
   puma (>= 5.0)
   rails (~> 7.1.1)
+  rainbow (~> 3.0)
   retriable
   rspec-rails
   rubocul (~> 4.0)
