@@ -38,7 +38,7 @@ Run the server.
   ```
 And in a separate terminal window, establish an SSH tunnel connection to the voyager db on port 1527:
   ```
-  ssh yourusername@all-nginx-dev1.cul.columbia.edu -L 1527:voyager-db.cul.columbia.edu:1527 -N
+  ssh yourusername@connect.cul.columbia.edu -L 1527:voyager-db.cul.columbia.edu:1527 -N
   ```
 ## Accessing API Endpoints
 Note: all HTTP requst headers must contain the authorization key set in `config/voyager.yml` or they will be rejected.
