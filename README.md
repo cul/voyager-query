@@ -8,13 +8,13 @@ A simple web API to perform queries for voyager via HTTP requests, useful as a w
 - Intel-based architecture (on host machine)
 
 ## First-Time Setup (for developers)
-install [rbenv](https://github.com/rbenv/rbenv)
+Install [rbenv](https://github.com/rbenv/rbenv)
 ````
 brew install rbenv ruby-build
 rbenv init
 echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
 ````
-clone the new forked repo onto your dev machine.
+Clone the new forked repo onto your dev machine.
 ````
 git clone git@github.com:cul/voyager-query.git
 ````
@@ -30,7 +30,7 @@ Set up config file.
   ```
   - Replace in placeholder values inside `config/voyager.yml`.
     - Replace the following fields with Voyager's Oracle database parameters: `database_name` `user` `password`
-  - set `remote_request_api_key` to a secure key to be added to the header of HTTP requests.
+  - Set `remote_request_api_key` to a secure key to be added to the header of HTTP requests.
 
 Run the server.
   ```
