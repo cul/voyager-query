@@ -1,6 +1,6 @@
 # voyager-query
 
-A simple web API to perform Voyager queries HTTP requests, useful as a workaround for ARM-based MACs.
+A simple web API to perform Voyager queries via HTTP requests, useful as a workaround for ARM-based MACs.
 
 ## Requirements
 
