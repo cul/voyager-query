@@ -44,10 +44,10 @@ And in a separate terminal window, establish an SSH tunnel connection to the voy
 Note: all HTTP requst headers must contain the authorization key set in `config/voyager.yml` or they will be rejected.
 To include your key in a `curl` request, run
   ```
-  curl -H "Authorization: Token the_token_set_in_voyager_yml" http://localhost:3000/records/12345678
+  curl -H "Authorization: Token the_token_set_in_voyager_yml" http://localhost:3000/api/v1/records/12345678
   ```
 ### Endpoints:
-`GET /records/:bib_id`
+`GET /api/v1/records/:bib_id`
 - JSON response with information about this record:
   ```
   {
@@ -55,10 +55,10 @@ To include your key in a `curl` request, run
     "holdings_record_ids": [567890, 567891, 567892]
   }
   ```
-`GET /records/:bib_id/record.marc`
+`GET /api/v1/records/:bib_id/record.marc`
 - MARC binary response with bib record MARC
 
-`GET /records/:bib_id/holdings/:holdings_record_id/record.marc`
+`GET /api/v1/records/:bib_id/holdings/:holdings_record_id/record.marc`
 - Returns the holdings record MARC
         
 ## Testing
