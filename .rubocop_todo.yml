@@ -126,12 +126,6 @@ Rails/FilePath:
 
 # Offense count: 1
 # This cop supports safe autocorrection (--autocorrect).
-Style/BlockComments:
-  Exclude:
-    - 'spec/spec_helper.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EnforcedStyle, ProceduralMethods, FunctionalMethods, AllowedMethods, AllowedPatterns, AllowBracesOnProceduralOneLiners, BracesRequiredMethods.
 # SupportedStyles: line_count_based, semantic, braces_for_chaining, always_braces
 # ProceduralMethods: benchmark, bm, bmbm, create, each_with_object, measure, new, realtime, tap, with_object
@@ -140,49 +134,6 @@ Style/BlockComments:
 Style/BlockDelimiters:
   Exclude:
     - 'lib/voyager/client_behavior/oracle_query_behavior.rb'
-
-# Offense count: 36
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: always, always_true, never
-Style/FrozenStringLiteralComment:
-  Exclude:
-    - 'Gemfile'
-    - 'Rakefile'
-    - 'app/channels/application_cable/channel.rb'
-    - 'app/channels/application_cable/connection.rb'
-    - 'app/controllers/application_controller.rb'
-    - 'app/helpers/application_helper.rb'
-    - 'app/helpers/records_helper.rb'
-    - 'app/jobs/application_job.rb'
-    - 'app/mailers/application_mailer.rb'
-    - 'app/models/application_record.rb'
-    - 'config.ru'
-    - 'config/application.rb'
-    - 'config/boot.rb'
-    - 'config/environment.rb'
-    - 'config/environments/development.rb'
-    - 'config/environments/production.rb'
-    - 'config/environments/test.rb'
-    - 'config/importmap.rb'
-    - 'config/initializers/assets.rb'
-    - 'config/initializers/content_security_policy.rb'
-    - 'config/initializers/filter_parameter_logging.rb'
-    - 'config/initializers/inflections.rb'
-    - 'config/initializers/permissions_policy.rb'
-    - 'config/initializers/voyager_query.rb'
-    - 'config/puma.rb'
-    - 'lib/tasks/voyager/test.rake'
-    - 'lib/voyager/client.rb'
-    - 'lib/voyager/client_behavior/bib_record_retrieval.rb'
-    - 'lib/voyager/client_behavior/holdings_retrieval.rb'
-    - 'lib/voyager/client_behavior/oracle_query_behavior.rb'
-    - 'spec/rails_helper.rb'
-    - 'spec/spec_helper.rb'
-    - 'test/application_system_test_case.rb'
-    - 'test/channels/application_cable/connection_test.rb'
-    - 'test/controllers/records_controller_test.rb'
-    - 'test/test_helper.rb'
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -248,33 +199,6 @@ Style/SafeNavigation:
 # SupportedStyles: use_perl_names, use_english_names, use_builtin_english_names
 Style/SpecialGlobalVars:
   EnforcedStyle: use_perl_names
-
-# Offense count: 82
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
-# SupportedStyles: single_quotes, double_quotes
-Style/StringLiterals:
-  Exclude:
-    - 'Gemfile'
-    - 'Rakefile'
-    - 'app/mailers/application_mailer.rb'
-    - 'config.ru'
-    - 'config/application.rb'
-    - 'config/boot.rb'
-    - 'config/environment.rb'
-    - 'config/environments/development.rb'
-    - 'config/environments/production.rb'
-    - 'config/environments/test.rb'
-    - 'config/importmap.rb'
-    - 'config/initializers/assets.rb'
-    - 'config/puma.rb'
-    - 'config/routes.rb'
-    - 'lib/voyager/client_behavior/holdings_retrieval.rb'
-    - 'spec/rails_helper.rb'
-    - 'test/application_system_test_case.rb'
-    - 'test/channels/application_cable/connection_test.rb'
-    - 'test/controllers/records_controller_test.rb'
-    - 'test/test_helper.rb'
 
 # Offense count: 7
 # This cop supports safe autocorrection (--autocorrect).

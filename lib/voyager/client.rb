@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Voyager
   class Client
     include Voyager::ClientBehavior::OracleQueryBehavior

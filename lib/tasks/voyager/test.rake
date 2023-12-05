@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :voyager do
     namespace :test do
       task :check_oracle_connection => :environment do
