@@ -8,7 +8,7 @@ module Voyager
       # Finds a single record by bib id
       # @return [MARC::Record] The MARC record associated with the given id.
       def find_by_bib_id(bib_id)
-        path = Rails.root.join('tmp', 'bib', 'record.marc').to_s
+        path = Rails.root.join('tmp/bib/record.marc').to_s
 
         FileUtils.mkdir_p(File.dirname(path))
         duration = Benchmark.realtime do

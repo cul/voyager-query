@@ -13,7 +13,7 @@ module Voyager
       @oracle_config = config[:oracle]
       # Make sure oracle config options are present so there aren't any surprises later when queries are run
       REQUIRED_ORACLE_CONFIG_OPTS.each do |required_config_opt|
-        raise ArgumentError, "Missing oracle config[:#{required_config_opt}] for #{self.class}" unless @oracle_config[required_config_opt].present?
+        raise ArgumentError, "Missing oracle config[:#{required_config_opt}] for #{self.class}" if @oracle_config[required_config_opt].blank?
       end
     end
 
