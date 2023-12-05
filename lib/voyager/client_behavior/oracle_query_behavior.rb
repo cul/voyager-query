@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Voyager
   module ClientBehavior
     module OracleQueryBehavior

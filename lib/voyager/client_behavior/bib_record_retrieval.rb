@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module Voyager
   module ClientBehavior
     module BibRecordRetrieval
@@ -28,7 +26,7 @@ module Voyager
           return bib_marc_record
         rescue Encoding::InvalidByteSequenceError => e
           # Re-raise error, appending a bit of extra info
-          raise e, "Problem decoding characters for record in marc file #{bib_id}. Error message: #{$!}", $!.backtrace
+          raise e, "Problem decoding characters for record in marc file #{bib_id}. Error message: #$!", $!.backtrace
           # To troubleshoot this error further, it can be useful to examine the record's text around the
           # byte range location given in the encoding error. Smart quotes are a common cause of problems.
         end

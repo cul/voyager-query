@@ -14,7 +14,7 @@ namespace :voyager do
     rescue OCIError => e
       puts "Connection available? false (Error: #{e.message})"
     ensure
-      oracle_connection.break if oracle_connection
+      oracle_connection&.break
     end
 
     task check_oci8_encoding: :environment do
