@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'update resource', type: :request do
@@ -6,7 +8,7 @@ RSpec.describe 'update resource', type: :request do
   context 'GET' do
     context '/api/v1/records/:id/record.marc' do
       let(:identifier_get_url) { "/api/v1/records/#{identifier}/record.marc" }
-      let(:title) { "test title" }
+      let(:title) { 'test title' }
       let(:marc_record) do
         record = MARC::Record.new
         # record.append(MARC::ControlField.new('001', identifier.to_s))
