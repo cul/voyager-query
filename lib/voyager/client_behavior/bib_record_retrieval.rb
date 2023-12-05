@@ -6,7 +6,7 @@ module Voyager
       # Finds a single record by bib id
       # @return [MARC::Record] The MARC record associated with the given id.
       def find_by_bib_id(bib_id)
-        path = Rails.root.join('tmp', 'bib', 'record.marc').to_s
+        path = Rails.root.join('tmp/bib/record.marc').to_s
 
         FileUtils.mkdir_p(File.dirname(path))
         duration = Benchmark.realtime do
@@ -26,7 +26,7 @@ module Voyager
           return bib_marc_record
         rescue Encoding::InvalidByteSequenceError => e
           # Re-raise error, appending a bit of extra info
-          raise e, "Problem decoding characters for record in marc file #{bib_id}. Error message: #{$!}", $!.backtrace
+          raise e, "Problem decoding characters for record in marc file #{bib_id}. Error message: #$!", $!.backtrace
           # To troubleshoot this error further, it can be useful to examine the record's text around the
           # byte range location given in the encoding error. Smart quotes are a common cause of problems.
         end

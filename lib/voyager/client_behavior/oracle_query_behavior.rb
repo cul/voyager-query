@@ -7,9 +7,9 @@ module Voyager
       def fill_in_query_placeholders(query, *args)
         options = args.extract_options!
         options.each do |name, value|
-          formatted_value = Array(value).collect do |item|
+          formatted_value = Array(value).collect { |item|
             "'#{item.to_s.gsub("'", "''")}'"
-          end.join(',')
+          }.join(',')
           query.gsub!("~#{name}~", formatted_value)
         end
         query

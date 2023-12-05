@@ -9,9 +9,9 @@ development:
 
 test:
   oracle:
-    host: null
-    port: null
-    database_name: null
-    user: null
-    password: null
+    host: localhost
+    port: 12345
+    database_name: TEST
+    user: test_user
+    password: test_password
   remote_request_api_key: 'changethis'

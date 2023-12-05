@@ -36,7 +36,6 @@
 
 # Ignore hidden files.
 .DS_Store
-.rubocop_todo.yml
 *.swp
 
 # simplecov coverage report.
