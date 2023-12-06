@@ -1,4 +1,4 @@
-# voyager-query
+# voyager_query
 
 A simple web API to perform Voyager queries via HTTP requests, useful as a workaround for ARM-based MACs.
 
@@ -16,11 +16,11 @@ echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc
 ````
 Clone the new forked repo onto your dev machine.
 ````
-git clone git@github.com:cul/voyager-query.git
+git clone git@github.com:cul/voyager_query.git
 ````
 Install gem dependencies.
 ```
-cd voyager-query
+cd voyager_query
 bundler install
 ```
 Set up config file.
