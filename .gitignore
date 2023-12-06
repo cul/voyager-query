@@ -43,3 +43,4 @@
 
 # Ignore config files with sensitive data
 /config/voyager.yml
+/config/database.yml
