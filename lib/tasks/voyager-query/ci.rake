@@ -41,8 +41,10 @@ namespace :voyager_query do
     raise rspec_system_exit_failure_exception unless rspec_system_exit_failure_exception.nil?
   end
 rescue LoadError => e
-  # Be prepared to rescue so that this rake file can exist in environments where RSpec is unavailable (i.e. production environments).
+  # Be prepared to rescue so that this rake file can exist in environments
+  # where RSpec is unavailable (i.e. production environments).
   puts '[Warning] Exception creating ci/rspec rake tasks. '\
-      'This message can be ignored in environments that intentionally do not pull in certain development/test environment gems (i.e. production environments).'
+       'This message can be ignored in environments that intentionally do not pull '\
+       'in certain development/test environment gems (i.e. production environments).'
   puts e
 end
