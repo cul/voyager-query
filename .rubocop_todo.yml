@@ -118,7 +118,7 @@ Style/VariableInterpolation:
 # URISchemes: http, https
 Layout/LineLength:
   Exclude:
-    - 'lib/tasks/voyager-query/ci.rake'
+    - 'lib/tasks/voyager_query/ci.rake'
     - 'lib/tasks/voyager/test.rake'
     - 'lib/voyager/client.rb'
     - 'lib/voyager/client_behavior/holdings_retrieval.rb'

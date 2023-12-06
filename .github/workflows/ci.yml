@@ -17,8 +17,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      # Caching the solr download makes a huge difference. It can take up to 10 minutes to download.
-      # Note that this action's caches will be evicted if not accessed for more than a week.
       - name: Cache Oracle Downloads
         id: cache-oracle-downloads
         uses: actions/cache@v3

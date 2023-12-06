@@ -9,7 +9,7 @@ lock '~> 3.18.0'
 set :rvm_custom_path, '~/.rvm-alma8'
 
 set :remote_user, 'renserv'
-set :application, 'voyager-query'
+set :application, 'voyager_query'
 set :repo_name, fetch(:application)
 set :repo_url, "git@github.com:cul/#{fetch(:repo_name)}.git"
 set :deploy_name, "#{fetch(:application)}_#{fetch(:stage)}"
