@@ -20,6 +20,11 @@ RSpec.describe 'update resource', type: :request do
         expect(response).to have_http_status(:success)
       end
 
+      it 'returns an unauthorized response' do
+        get identifier_get_url, params: {}
+        expect(response).to have_http_status(:unauthorized)
+      end
+
       it 'returns a response contiaining the identifier when using the record identifier in the url' do
         get_with_auth identifier_get_url, params: {}
         expect(JSON.parse(response.body)).to include('bib_id' => identifier)
