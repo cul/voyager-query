@@ -22,7 +22,8 @@ set :deploy_to, "/opt/passenger/#{fetch(:deploy_name)}"
 # Default value for :linked_files is []
 append  :linked_files,
         'config/master.key',
-        'config/voyager.yml'
+        'config/voyager.yml',
+        'config/database.yml'
 
 # Default value for linked_dirs is []
 append :linked_dirs, 'log', 'tmp/pids', 'node_modules'
