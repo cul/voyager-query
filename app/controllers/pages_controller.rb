@@ -2,6 +2,6 @@
 
 class PagesController < ApplicationController
   def home
-    render plain: "This is Voyager Query #{File.read('VERSION')}."
+    render plain: "This is Voyager Query #{APP_VERSION}."
   end
 end
