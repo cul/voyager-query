@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get '/', to: 'pages#home'
+
   namespace :api do
     namespace :v1 do
       get '/records/:bib_id', to: 'records#info_json'
